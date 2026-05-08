@@ -14,6 +14,7 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/auth' element={<Auth />} />
       <Route path='/checkout' element={<Checkout />} />
+      <Route path='*' element={<h1 style={{ textAlign: 'center', margin: '10rem 0' }}>404 Not Found</h1>} />
     </Routes>
   </div>
   )
