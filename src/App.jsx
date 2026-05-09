@@ -6,11 +6,14 @@ import Checkout from './pages/Checkout'
 import Navbar from './components/Navbar'
 import AuthProvider from './context/AuthContext'
 import ProductDetails from './components/ProductDetails'
+import CartProvider from './context/CartContext'
 
 function App() {
 
   return ( 
-    <AuthProvider>
+
+  <AuthProvider>
+    <CartProvider>
   <div className='app'>
     <Navbar />
     <Routes>
@@ -21,6 +24,7 @@ function App() {
       <Route path='*' element={<h1 style={{ textAlign: 'center', margin: '10rem 0' }}>404 Not Found</h1>} />
     </Routes>
   </div>
+  </CartProvider>
 </AuthProvider>
   )
 }
